@@ -1,0 +1,62 @@
+## customization pseudo
+dependency: enums
+
+// chassis customizations
+
+Open_Frame: Customization
+    prop name = "Open Frame"
+    prop agility = (1, False)
+    prop max_spaces = 3
+    prop cost = (750, 4)
+    prop speed = (1, False)
+    prop traits = ["Open Vehicle"]
+    prop desc = "Lorem ipsum"
+
+Monowheel: Customization
+    prop name = "Monowheel"
+    prop tech_level = 9
+    prop agility = (2, False)
+    prop max_spaces = 3
+    prop cost = (2500, 4)
+    prop speed = (1, False)
+    prop traits = ["Open Vehicle"]
+    prop desc = "Lorem ipsum"
+
+Rail_Rider: Customization
+    prop name = "Rail Rider"
+    prop agility = (-2, True)
+    prop spaces = (1, 0, True)
+    prop speed = (1, True)
+    prop cost = (400, 4)
+    prop off_rail = False
+    prop desc = "Lorem ipsum"
+
+Off_Roader: Customization
+    prop name = "Off-roader"
+    prop cost = (100, 4)
+    prop traits = ["Off-roader"]
+    prop desc = "Lorem ipsum"
+
+ATV: Customization
+    prop name = "All-terrain Vehicle"
+    prop cost = (250, 4)
+    prop traits = ["ATV"]
+    prop desc = "Lorem ipsum"
+
+Tracks: Customization
+    prop name = "Tracks"
+    prop tech_level = 5
+    prop skill = "Drive (track)"
+    prop cost = (750, 4)
+    prop speed = (-1, True)
+    prop traits = ["Tracked"]
+    prop desc = "Lorem ipsum"
+
+Armored_Fighting_Vehicle: Customization
+    prop name = "Armored Fighting Vehicle"
+    prop tech_level = 5
+    prop cost = (3000, 4)
+    prop speed = (-1, False)
+    prop traits = ["AFV", "Off-roader"]
+    prop desc = "Lorem ipsum"
+

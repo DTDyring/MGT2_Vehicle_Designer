@@ -1,0 +1,61 @@
+# Hierarchy of a vehicle object
+
+obj vehicle
+    prop tech level
+    prop name
+    obj chassis
+        obj chassis type
+            prop chassis name
+            prop min tech level
+            prop min spaces
+            prop max spaces
+            prop hull per space
+            prop shipping tonnage per space
+            prop skill
+            prop agility
+            prop base max speed
+            prop base max range
+            prop trait list
+            prop cost
+            obj chassis customization
+                prop <property modifications> (as many as necessary)
+    obj armor
+        obj armor type
+            prop armor name
+            prop min tech level
+            prop minimum protection
+            prop maximum protection (this is modified by chassis trait Armored Fighting Vehicle (AFV))
+            prop cost (this is a percentage of chassis cost per *additional* 1 point of armor above minimum)
+            prop spaces (this is a percentage of chassis spaces per *additional* 1 point of armor above minimum, min. 1)
+            prop description (e.g. materials used)
+    obj armament
+        obj mount type
+            prop mount name
+            prop vehicle spaces
+            prop maximum weapon spaces (e.g. small turret = 4, hardpoint customizable size (e.g. 1, 3, 7, etc.)
+            prop base_cost
+            prop weapon_space_cost
+            prop pop-up
+            prop modular
+            prop crew complement
+            prop mount arc
+            obj <weapon> (as many as necessary)
+                prop weapon type
+                prop weapon cost
+                prop trait list
+                prop weapon magazine
+                prop weapon range
+                prop weapon damage
+                prop weapon spaces
+    obj customization
+        obj customization type
+            prop customization name
+            prop spaces (customizable e.g. staterooms, internal bays)
+            prop can customize spaces
+            prop description
+            prop <property modifications> (as many as necessary)
+    obj personnel
+        prop total personnel
+        prop spaces per person
+
+
