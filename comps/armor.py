@@ -1,6 +1,6 @@
 from .comp_types import Armor
 
-armor_1 = Armor(
+ARMOR_1 = Armor(
     "Armor A",
     tech_level=0,
     max_armor=10,
@@ -19,7 +19,7 @@ armor_2 = Armor(
     desc="Iron"
 )
 
-armor_3 = Armor(
+ARMOR_3 = Armor(
     "Armor C",
     tech_level=6,
     base_armor=2,
@@ -29,7 +29,7 @@ armor_3 = Armor(
     desc="Steel, Composites"
 )
 
-armor_4 = Armor(
+ARMOR_4 = Armor(
     "Armor D",
     tech_level=9,
     base_armor=3,
@@ -39,7 +39,7 @@ armor_4 = Armor(
     desc="Crystaliron"
 )
 
-armor_5 = Armor(
+ARMOR_5 = Armor(
     "Armor E",
     tech_level=12,
     base_armor=4,
@@ -49,7 +49,7 @@ armor_5 = Armor(
     desc="Bonded Superdense, Cast Diamond"
 )
 
-armor_6 = Armor(
+ARMOR_6 = Armor(
     "Armor F",
     tech_level=15,
     base_armor=4,
@@ -59,7 +59,7 @@ armor_6 = Armor(
     desc="Molecular Bonded, Cerametals, Spun Diamond"
 )
 
-armor_7 = Armor(
+ARMOR_7 = Armor(
     "Armor G",
     tech_level=18,
     base_armor=5,

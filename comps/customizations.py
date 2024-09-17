@@ -1,4 +1,4 @@
-from .comp_types import Customization, Customization_Plane, Customization_Airship, airship
+from .comp_types import Customization, Customization_Plane, Customization_Airship, Customization_Mount
 
 # chassis customizations
 # light ground vehicles
@@ -10,7 +10,7 @@ cust_chas_open_frame_a = Customization(
     speed=(1, 0, 0),
     desc="An open frame vehicle is a light ground vehicle that the rider mounts rather than climbs inside. They often "
          "have just two or three wheels to make a motorcycle or trike.",
-    traits=["Open Vehicle"]
+    traits=("Open Vehicle")
 )
 
 cust_chas_monowheel = Customization(
@@ -22,7 +22,7 @@ cust_chas_monowheel = Customization(
     speed=(1, 0, 0),
     desc="A development of the motorcycle, this vehicle uses complex gyroscopic systems to balance itself on a single "
          "wheel.",
-    traits=["Open Vehicle"]
+    traits=("Open Vehicle")
 )
 
 cust_chas_rail_rider_a = Customization(
@@ -39,7 +39,7 @@ cust_chas_rough_terrain_a = Customization(
     "Rough Terrain",
     cost=(100, 4, 0),
     desc="A Light Ground Vehicle can have its suspension and drive systems modified to handle rough terrain.",
-    traits=["Off-roader"]
+    traits=("Off-roader")
 )
 
 cust_chas_all_terrain_a = Customization(
@@ -47,7 +47,7 @@ cust_chas_all_terrain_a = Customization(
     cost=(250, 4, 0),
     desc="A Light Ground Vehicle can have its suspension and drive systems modified and additional wheels added to "
          "improve its handling in rough terrain.",
-    traits=["ATV"]
+    traits=("ATV")
 )
 
 cust_chas_tracks_a = Customization(
@@ -58,7 +58,7 @@ cust_chas_tracks_a = Customization(
     speed=(-1, 0, 0),
     desc="A Light Ground Vehicle can be built with tracks instead of wheels, specializing it to handle difficult "
          "terrain at the expense of road performance.",
-    traits=["Tracked"]
+    traits=("Tracked")
 )
 
 # heavy ground vehicles
@@ -87,7 +87,7 @@ cust_chas_rough_terrain_b = Customization(
     "Rough Terrain",
     cost=(500, 4, 0),
     desc="A Heavy Ground Vehicle can have its suspension and drive systems modified to handle rough terrain.",
-    traits=["Off-roader"]
+    traits=("Off-roader")
 )
 
 cust_chas_all_terrain_b = Customization(
@@ -95,7 +95,7 @@ cust_chas_all_terrain_b = Customization(
     cost=(1000, 4, 0),
     desc="A Heavy Ground Vehicle can have its suspension and drive systems modified and additional wheels added to "
          "improve its handling in rough terrain.",
-    traits=["ATV"]
+    traits=("ATV")
 )
 
 cust_chas_tracks_b = Customization(
@@ -106,7 +106,7 @@ cust_chas_tracks_b = Customization(
     speed=(-1, 0, 4),
     desc="A Heavy Ground Vehicle can be built with tracks instead of wheels, specializing it to handle difficult "
          "terrain at the expense of performance on roads.",
-    traits=["Tracked"]
+    traits=("Tracked")
 )
 
 cust_chas_tunneller = Customization(
@@ -130,7 +130,7 @@ cust_chas_open_frame_b = Customization(
     desc="The smallest Light Grave Vehicles can be built as an open frame with passengers effectively sitting on top "
          "or astride it. The g/bike is a good example of such a vehicle. They tend to be extremely fast but, without "
          "adequate computer-assisted controls, utterly lethal.",
-    traits=["Open Vehicle"]
+    traits=("Open Vehicle")
 )
 
 cust_chas_streamlined_a = Customization(
@@ -149,7 +149,7 @@ cust_chas_armored_fighting_vehicle_b = Customization(
     speed=(-1, 0, 0),
     desc="A natural progression from wheeled and tracked-based combat vehicles, grav vehicles make extremely good "
          "weapons platforms for any military, crossing the boundaries between tanks and attack aircraft.",
-    traits=["AFV"]
+    traits=("AFV")
 )
 
 cust_chas_streamlined_b = Customization(
@@ -539,7 +539,7 @@ cust_chas_armored_fighting_vehicle_c = Customization(
     speed=(-1, 0, 0),
     desc="Turning a Heavy Walker into an Armored Fighting Vehicle (AFV) requires adding structural support and armor, "
          "but can make for a terrifying war machine.",
-    traits=["AFV"]
+    traits=("AFV")
 )
 
 cust_chas_multi_legs_b = Customization(
@@ -558,7 +558,7 @@ cust_chas_open_frame_c = Customization(
     cost=(2500, 4, 0),
     speed=(1, 0, 0),
     desc="An open frame vehicle is a Hovercraft that the rider mounts rather than climbs inside.",
-    traits=["Open Vehicle"]
+    traits=("Open Vehicle")
 )
 
 # heavy hovercraft
@@ -568,32 +568,148 @@ cust_chas_armored_fighting_vehicle_d = Customization(
     cost=(10000, 4, 0),
     speed=(-1, 0, 0),
     desc="Turning a Hovercraft into an Armored Fighting Vehicle (AFV) requires adding structural support and armor.",
-    traits=["AFV"]
+    traits=("AFV")
 )
 
 
+# TODO:
 # performance customizations
 
 
+# TODO:
 # control systems customizations
 
 
+# TODO:
 # drive systems customizations
 
 
+# TODO:
 # power systems customizations
 
 
+# TODO:
 # active defense customizations
 
 
+# TODO:
 # electronics customizations
 
 
+# TODO:
 # stealth and camo customizations
 
 
+# TODO:
 # environmental customizations
 
 
+# TODO:
 # utility customizations
+
+
+# TODO:
+# mount customizations
+# TODO: fire control customization is actually a weapon customization
+cust_mnt_fire_control_a = Customization_Mount(
+    "Basic Fire Control System",
+    tech_level=6,
+    cost=(10000, 0, 0),
+    spaces=(0, 0, 0),
+    desc="The use of fire control systems allows weapons to be targeted far more accurately. This can range from "
+         "simple gyrostabilization to laser-rangefinders and integration of the vehicle's own advanced sensor arrays "
+         "to the weapon systems. However, due to their cost and complexity, fire control systems are normally fitted "
+         "only to a vehicle's primary weapons.\n\n"
+         "All fire control systems grant the Scope trait to the weapon they are attached to (p. 133, Traveller Core "
+         "Rulebook).",
+    dice_mod="+1 Attack Roll DM",
+    traits=("Scope")
+)
+
+cust_mnt_fire_control_b = Customization_Mount(
+    "Improved Fire Control System",
+    tech_level=8,
+    cost=(25000, 0, 0),
+    spaces=(0, 0, 0),
+    desc="The use of fire control systems allows weapons to be targeted far more accurately. This can range from "
+         "simple gyrostabilization to laser-rangefinders and integration of the vehicle's own advanced sensor arrays "
+         "to the weapon systems. However, due to their cost and complexity, fire control systems are normally fitted "
+         "only to a vehicle's primary weapons.\n\n"
+         "All fire control systems grant the Scope trait to the weapon they are attached to (p. 133, Traveller Core "
+         "Rulebook).",
+    dice_mod="+2 Attack Roll DM",
+    traits=("Scope")
+)
+
+cust_mnt_fire_control_c = Customization_Mount(
+    "Enhanced Fire Control System",
+    tech_level=10,
+    cost=(25000, 0, 0),
+    spaces=(0, 0, 0),
+    desc="The use of fire control systems allows weapons to be targeted far more accurately. This can range from "
+         "simple gyrostabilization to laser-rangefinders and integration of the vehicle's own advanced sensor arrays "
+         "to the weapon systems. However, due to their cost and complexity, fire control systems are normally fitted "
+         "only to a vehicle's primary weapons.\n\n"
+         "All fire control systems grant the Scope trait to the weapon they are attached to (p. 133, Traveller Core "
+         "Rulebook).",
+    dice_mod="+3 Attack Roll DM",
+    traits=("Scope")
+)
+
+cust_mnt_fire_control_d = Customization_Mount(
+    "Advanced Fire Control System",
+    tech_level=12,
+    cost=(25000, 0, 0),
+    spaces=(0, 0, 0),
+    desc="The use of fire control systems allows weapons to be targeted far more accurately. This can range from "
+         "simple gyrostabilization to laser-rangefinders and integration of the vehicle's own advanced sensor arrays "
+         "to the weapon systems. However, due to their cost and complexity, fire control systems are normally fitted "
+         "only to a vehicle's primary weapons.\n\n"
+         "All fire control systems grant the Scope trait to the weapon they are attached to (p. 133, Traveller Core "
+         "Rulebook).",
+    dice_mod="+4 Attack Roll DM",
+    traits=("Scope")
+)
+
+
+cust_mnt_gun_shield = Customization(
+    "Gun Shield",
+    tech_level=1,
+    cost=(1000, 0, 0),
+    spaces=(0, 0, 0),
+    desc="A plate which provides a Traveller protection equal to the vehicle's Tech Level in the direction of the "
+         "mount's facing."
+)
+
+cust_mnt_pop_up = Customization(
+    "Pop-up Mount",
+    desc="Any mount can be concealed within a vehicle until required. This is typically done in order to gain surprise "
+         "on an enemy or to avoid cursory checks from discovering illegal weaponry.",
+    cost=(10000, 4, 0),
+    spaces=(1, 4),
+    this_min_spaces=1,
+
+)
+
+cust_mnt_modular = Customization(
+    "Modular Mount",
+    desc="Any mount can be made modular, allowing a variety of weapons to be fitted. This allows a vehicle to change "
+         "its 'mission profile' and become effective against different enemies.\n\n"
+         "Changing a weapon on a modular mount requires a Routine (6+) Mechanics check (1D minutes, INT or EDU).",
+    cost=(1.5, 5, 0)
+)
+
+# not sure how to do this one yet
+# cust_mnt_linked = Customization_Mount()
+
+# weapon customizations
+
+cust_wep_ammunition = Customization(
+    "Ammunition",
+    desc="Additional Spaces set aside for ammunition allows an extra magazine (as defined by the weapon) to be "
+         "directly attached to a weapon, allowing it to be used without the need to reload. These Spaces have no cost "
+         "other than the ammunition that fills them. Weapons of less than 1 ton may have up to 10 magazines for every "
+         "Space dedicated to ammunition in this way.",
+    spaces=(0, 0, 1),
+)
+

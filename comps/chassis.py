@@ -1,7 +1,8 @@
 from .comp_types import Chassis, Chassis_Plane, Chassis_Airship, Chassis_Submersible
 from .customizations import *
 
-light_ground_vehicle = Chassis(
+
+chas_light_ground_vehicle = Chassis(
     "Light Ground Vehicle",
     tech_level=4,
     max_spaces=20,
@@ -23,7 +24,7 @@ light_ground_vehicle = Chassis(
         )
 )
 
-heavy_ground_vehicle = Chassis(
+chas_heavy_ground_vehicle = Chassis(
     "Heavy Ground Vehicle",
     tech_level=4,
     min_spaces=20,
@@ -43,7 +44,7 @@ heavy_ground_vehicle = Chassis(
     )
 )
 
-light_grav_vehicle = Chassis(
+chas_light_grav_vehicle = Chassis(
     "Light Grav Vehicle",
     tech_level=8,
     agility=1,
@@ -63,7 +64,7 @@ light_grav_vehicle = Chassis(
     )
 )
 
-heavy_grav_vehicle = Chassis(
+chas_heavy_grav_vehicle = Chassis(
     "Heavy Grav Vehicle",
     tech_level=8,
     agility=-1,
@@ -83,7 +84,7 @@ heavy_grav_vehicle = Chassis(
     )
 )
 
-unpowered_vehicle = Chassis(
+chas_unpowered_vehicle = Chassis(
     "Unpowered Vehicle",
     tech_level=1,
     agility=-1,
@@ -104,7 +105,7 @@ unpowered_vehicle = Chassis(
     )
 )
 
-unpowered_boat = Chassis(
+chas_unpowered_boat = Chassis(
     "Unpowered Boat",
     tech_level=1,
     agility=-1,
@@ -125,7 +126,7 @@ unpowered_boat = Chassis(
     )
 )
 
-powered_boat = Chassis(
+chas_powered_boat = Chassis(
     "Powered Boat",
     tech_level=3,
     agility=-2,
@@ -147,7 +148,7 @@ powered_boat = Chassis(
     )
 )
 
-ship = Chassis(
+chas_ship = Chassis(
     "Ship",
     tech_level=4,
     agility=-6,
@@ -167,7 +168,7 @@ ship = Chassis(
     )
 )
 
-light_submersible = Chassis_Submersible(
+chas_light_submersible = Chassis_Submersible(
     "Light Submersible",
     tech_level=4,
     agility=-2,
@@ -196,7 +197,7 @@ light_submersible = Chassis_Submersible(
     )
 )
 
-heavy_submersible = Chassis_Submersible(
+chas_heavy_submersible = Chassis_Submersible(
     "Heavy Submersible",
     tech_level=4,
     agility=-4,
@@ -225,7 +226,7 @@ heavy_submersible = Chassis_Submersible(
     )
 )
 
-airship = Chassis_Airship(
+chas_airship = Chassis_Airship(
     "Airship",
     tech_level=3,
     skill="Flyer (airship)",
@@ -249,7 +250,7 @@ airship = Chassis_Airship(
     )
 )
 
-light_aeroplane = Chassis_Plane(
+chas_light_aeroplane = Chassis_Plane(
     "Light Aeroplane",
     tech_level=4,
     skill="Flyer (wing)",
@@ -271,7 +272,7 @@ light_aeroplane = Chassis_Plane(
     )
 )
 
-heavy_aeroplane = Chassis_Plane(
+chas_heavy_aeroplane = Chassis_Plane(
     "Heavy Aeroplane",
     tech_level=4,
     skill="Flyer (wing)",
@@ -291,7 +292,7 @@ heavy_aeroplane = Chassis_Plane(
     )
 )
 
-light_jet = Chassis_Plane(
+chas_light_jet = Chassis_Plane(
     "Light Jet",
     tech_level=5,
     skill="Flyer (wing)",
@@ -313,7 +314,7 @@ light_jet = Chassis_Plane(
     )
 )
 
-heavy_jet = Chassis_Plane(
+chas_heavy_jet = Chassis_Plane(
     "Heavy Jet",
     tech_level=5,
     skill="Flyer (wing)",
@@ -334,7 +335,7 @@ heavy_jet = Chassis_Plane(
     )
 )
 
-vtol = Chassis(
+chas_vtol = Chassis(
     "Helicopter, Aerodyne, or Ornithopter",
     skill="Flyer (rotor)",
     max_spaces=200,
@@ -355,7 +356,7 @@ vtol = Chassis(
     )
 )
 
-light_walker = Chassis(
+chas_light_walker = Chassis(
     "Light Walker",
     tech_level=8,
     skill="Drive (walker)",
@@ -363,7 +364,7 @@ light_walker = Chassis(
     cost=10000,
     hull=(2.0, 1),
     shipping=0.5,
-    traits=["ATV"],
+    traits=("ATV"),
     desc="Walkers use computer-controlled legs to literally walk, allowing them to negotiate difficult terrain that "
          "would be impassable to wheeled vehicles. They are noticeably larger than suits of powered armor or battle "
          "dress, with even small models requiring a Traveller climbs into them, rather than 'wearing' them.",
@@ -375,7 +376,7 @@ light_walker = Chassis(
     )
 )
 
-heavy_walker = Chassis(
+chas_heavy_walker = Chassis(
     "Heavy Walker",
     tech_level=8,
     skill="Drive (walker)",
@@ -383,7 +384,7 @@ heavy_walker = Chassis(
     cost=20000,
     hull=(3.0, 1),
     shipping=0.5,
-    traits=["ATV"],
+    traits=("ATV"),
     desc="Larger walkers tend to be very specialized, as their construction is both difficult and expensive. They are "
          "thus used for very specific purposes rather than being designed as general purpose vehicles.",
     tech_table={
@@ -394,7 +395,7 @@ heavy_walker = Chassis(
     )
 )
 
-light_hovercraft = Chassis(
+chas_light_hovercraft = Chassis(
     "Light Hovercraft",
     tech_level=5,
     skill="Drive (hovercraft)",
@@ -414,7 +415,7 @@ light_hovercraft = Chassis(
     )
 )
 
-heavy_hovercraft = Chassis(
+chas_heavy_hovercraft = Chassis(
     "Heavy Hovercraft",
     tech_level=5,
     skill="Drive (hovercraft)",

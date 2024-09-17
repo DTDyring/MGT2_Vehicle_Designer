@@ -10,6 +10,9 @@
          - Organically add/remove different loadouts for vehicle?
       - Collapse/expand sections
          - Collapse/expand individual members of sections?
+      - Multiple methods for add/remove to a vehicle
+         - Drag and Drop
+         - Add/Remove button
   - Contain all types of vehicles
   - Contain all types of traits
   - Contain all types of quirks

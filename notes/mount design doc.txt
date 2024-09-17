@@ -1,0 +1,36 @@
+mount needs:
+- name
+- type(?)
+    - Enum?
+        - contains mount name?
+            - this would not necessarily reduce overhead, just require an additional function/object for discerning
+              between items when presenting e.g. name of a mount to a user in a report, etc.
+- vehicle spaces
+    - fixed mount spaces = weapon spaces = vehicle spaces
+    - gun port = 0
+    - small turret = 1
+    - bay = weapon spaces = vehicle spaces
+    - large turret = 4 + crew
+- maximum spaces
+    - fixed mount = 0 (unless launching drones, but this is a separate rule)
+    - gun port = 0 (can't "mount" weapons)
+    - small turret = 4
+    - large turret = 0
+    - pintle/ring mount = 2
+- firing arc
+    - All
+    - Front
+    - Left
+    - Right
+    - Rear
+- weapons
+    - bay, multi-bay, hardpoint = only one-shot weapons (missiles, bombs, etc.)
+    - gun port = none
+    - turrets, fixed mount, pintle/ring = any
+- cost
+    - gun port = flat cost
+    - fixed mount = weapon cost
+    - hardpoint, bay, turret = per space
+- customizations
+    - gun shield (only pintle/ring)
+    - pop-up, modular (all)
