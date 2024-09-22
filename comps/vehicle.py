@@ -18,26 +18,43 @@ class Vehicle:
         self.can_off_rail = False
 
     def get_used_spaces(self):
-        """sums all spaces outside the chassis total spaces
-        :return used_spaces"""
+        """Sums all Spaces outside the chassis total spaces"""
         pass
 
     def get_cost(self):
-        """needs to be (cost per space * spaces + (sum of everything else))
-        :return total_cost"""
+        """Needs to be (cost per space * spaces + (sum of everything else))
+
+            Returns:
+                cost: int
+
+        """
         pass
 
     def get_cargo_space(self):
         """this needs to return (total spaces - used spaces) * 250
-        :return cargo_space"""
+
+            Returns:
+                cargo_space: int
+
+        """
         pass
 
     def get_shipping_tonnage(self):
-        """this needs to be (total spaces * shipping tonnage per space)"""
+        """this needs to be (total spaces * shipping tonnage per space)
+
+            Returns:
+                shipping_tonnage: int
+
+        """
         pass
 
     def get_hull_points(self):
-        """this needs to return (hull points per space * spaces)"""
+        """this needs to return (hull points per space * spaces)
+
+            Returns:
+                hull_points: int
+
+        """
         pass
 
     def get_spaces(self):

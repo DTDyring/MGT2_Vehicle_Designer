@@ -60,7 +60,7 @@ mnt_bay = Mount(
     desc="A bay is an internal space designed to hold one-shot ordnance such as bombs, missiles, and torpedoes. It can"
          "only fire one weapon per round.",
     poss_customizations=(cust_mnt_fire_control_a, cust_mnt_fire_control_b, cust_mnt_fire_control_c,
-                         cust_mnt_fire_control_d, cust_mnt_modular, cust_mnt_pop_up)
+                         cust_mnt_fire_control_d, cust_mnt_modular, cust_mnt_pop_up),
     poss_weapons=1
 )
 

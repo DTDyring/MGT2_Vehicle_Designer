@@ -1,3 +1,9 @@
+### NOTES ###
+[1] ttk.Notebook might be useful
+
+
+##### customization frame #####
+
 # GOAL
     - Create a generic container which can hold an infinite number of customizations in a scrollable, vertical layout
         where each customization is selected by clicking an "ADD CUSTOMIZATION" button which produces a dialog,
