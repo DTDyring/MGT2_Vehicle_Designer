@@ -1,0 +1,80 @@
+# GOAL
+    - Create a generic container which can hold an infinite number of customizations in a scrollable, vertical layout
+        where each customization is selected by clicking an "ADD CUSTOMIZATION" button which produces a dialog,
+        dropdown, or additional frame with a list of possible customizations for the parent object (excluding
+        duplicates). When a choice is made, the "ADD CUSTOMIZATION" button is moved to the next row in the vertical,
+        and in its prior position the name of the selection is added. On the left of the selection is a "X" or "REMOVE"
+        button, which causes the item on that row to be removed and moves all items below it up in the list.
+
+        Selecting a chosen customization in the customization list should show a box next to the list of customizations
+        which reveals information about the selection. If a customization has members that are "responsive", these
+        members should be configurable in this box.
+
+        The entire container should be collapsible, so that users can hide it from view at will.
+
+# data structure
+    - application
+    - list (of Customization(s))
+        - list.append[selection]
+        - list.pop[x]
+        - parallel list of "button" entries and customizations
+
+# gui
+    - ttk.Frame
+        - custom class?
+    - ttk.Button
+        - add customization
+        - remove customization
+    - ttk.Style
+        - use to set default style, and modify style on mouseover, etc.
+    - ttk.Combobox
+        - dropdown menu
+    - ttk.Scrollbar
+        - should only appear if the list of customizations (either in the main list or "add" list) is too long to be
+            displayed in the original window
+    - ttk.Treeview(?)
+        - idk how to use this yet, looks like it might be more aimed at DB interaction, which might not be appropriate
+            to this use case.
+        -  Collapsible
+            - "open" option: "A boolean value indicating whether the item's children should be displayed (-open true) or
+                hidden (-open false)."
+    - ttk.PanedWindow
+        - not sure yet. Might be useful.
+        - resizable "panes" inside a window, may be better for topLevel
+
+#######################
+# customization frame #
+#######################
+obj Customization_Frame
+    prop frame_main
+        prop btn_cust_add
+        prop btn_cust_remove
+        prop btn_cust_inspect
+        prop frame_cust_inspect
+            prop label // as many as needed to communicate app.obj desc
+            prop configurable_element // if is_responsive on any app.obj props
+
+
+############################
+# add customization button #
+############################
+obj Customization_Button
+    prop btn_main = ttk.Button
+        prop btn_cust_style_default
+        prop btn_cust_style_hover
+        prop btn_cust_style_focus // might be same as previous(?)
+        prop btn_cust_style_click
+    fnc on_focus
+        ret btn_main.style = btn_cust_style_focus
+    fnc on_hover
+        ret btn_main.style = btn_cust_style_active
+    fnc on_click
+        ret btn_main.style = btn_cust_style_click
+    fnc on_release
+        ret customization_frame
+
+ttk.Button
+    - "Add Customization..."
+        - opens a selection of some kind (e.g. dropdown) which lets user choose a customization from
+            parent.obj.possible_customizations
+
