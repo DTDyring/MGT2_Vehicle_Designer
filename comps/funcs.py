@@ -1,3 +1,5 @@
+from enums import Cost_Types
+
 def is_responsive(parm) -> bool:
     ret = False
     if parm["responsive"]:
@@ -28,3 +30,4 @@ def new_speed_table(parm: str) -> bool:
     if parm == "Wind-powered":
         ret = True
     return ret
+

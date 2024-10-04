@@ -165,7 +165,6 @@ cust_chas_wind_powered = Customization(
     "Wind-powered",
     tech_level=3,
     tech_table={1: (2, 0), 7: (3, 0), 10: (4, 0)},
-    new_tech_table=True,
     cost=(200, 4, 0),
     desc="By using sails more commonly seen on waterborne vehicles, a light chassis can be propelled at some "
          "surprising speed. However, the vehicle is utterly reliant on prevailing conditions and its maximum speed can "
@@ -228,7 +227,7 @@ cust_chas_supercavitating_drive_a = Customization(
     speed=(7, 1, 0),
     cost=(200000, 4, 0),
     range=(700, 1),
-    min_spaces=10,
+    this_min_spaces=10,
     desc="While most submersibles are propelled by props or water jets, a supercavitating drive surrounds the craft "
          "with a bubble of atmosphere and propels it forward through the use of rockets, jets, or thrusters. By "
          "eliminating the friction of the water surrounding it, the supercavitating drive is capable of driving the "
@@ -242,7 +241,7 @@ cust_chas_supercavitating_drive_b = Customization(
     speed=(7, 1, 0),
     cost=(100000, 4, 0),
     range=(1600, 1),
-    min_spaces=10,
+    this_min_spaces=10,
     desc="While most submersibles are propelled by props or water jets, a supercavitating drive surrounds the craft "
          "with a bubble of atmosphere and propels it forward through the use of rockets, jets, or thrusters. By "
          "eliminating the friction of the water surrounding it, the supercavitating drive is capable of driving the "
@@ -255,7 +254,7 @@ cust_chas_supercavitating_drive_c = Customization(
     spaces=(0.2, 1, 0),
     speed=(8, 1, 0),
     range=(1800, 1),
-    min_spaces=10,
+    this_min_spaces=10,
     cost=(50000, 4, 0),
     desc="While most submersibles are propelled by props or water jets, a supercavitating drive surrounds the craft "
          "with a bubble of atmosphere and propels it forward through the use of rockets, jets, or thrusters. By "
@@ -269,7 +268,7 @@ cust_chas_supercavitating_drive_d = Customization(
     spaces=(0.1, 1, 0),
     speed=(8, 1, 0),
     range=(2000, 1),
-    min_spaces=10,
+    this_min_spaces=10,
     cost=(25000, 4, 0),
     desc="While most submersibles are propelled by props or water jets, a supercavitating drive surrounds the craft "
          "with a bubble of atmosphere and propels it forward through the use of rockets, jets, or thrusters. By "
@@ -284,7 +283,7 @@ cust_chas_supercavitating_drive_e = Customization(
     spaces=(0.4, 1, 0),
     speed=(7, 1, 0),
     range=(700, 1),
-    min_spaces=10,
+    this_min_spaces=10,
     cost=(500000, 4, 0),
     desc="While most submersibles are propelled by props or water jets, a supercavitating drive surrounds the craft "
          "with a bubble of atmosphere and propels it forward through the use of rockets, jets, or thrusters. By "
@@ -298,7 +297,7 @@ cust_chas_supercavitating_drive_f = Customization(
     spaces=(0.3, 1, 0),
     speed=(7, 1, 0),
     range=(1600, 1),
-    min_spaces=10,
+    this_min_spaces=10,
     cost=(400000, 4, 0),
     desc="While most submersibles are propelled by props or water jets, a supercavitating drive surrounds the craft "
          "with a bubble of atmosphere and propels it forward through the use of rockets, jets, or thrusters. By "
@@ -312,7 +311,7 @@ cust_chas_supercavitating_drive_g = Customization(
     spaces=(0.2, 1, 0),
     speed=(8, 1, 0),
     range=(1800, 1),
-    min_spaces=10,
+    this_min_spaces=10,
     cost=(250000, 4, 0),
     desc="While most submersibles are propelled by props or water jets, a supercavitating drive surrounds the craft "
          "with a bubble of atmosphere and propels it forward through the use of rockets, jets, or thrusters. By "
@@ -326,7 +325,7 @@ cust_chas_supercavitating_drive_h = Customization(
     spaces=(0.1, 1, 0),
     speed=(8, 1, 0),
     range=(2000, 1),
-    min_spaces=10,
+    this_min_spaces=10,
     cost=(100000, 4, 0),
     desc="While most submersibles are propelled by props or water jets, a supercavitating drive surrounds the craft "
          "with a bubble of atmosphere and propels it forward through the use of rockets, jets, or thrusters. By "
@@ -688,7 +687,6 @@ cust_mnt_pop_up = Customization(
     cost=(10000, 4, 0),
     spaces=(1, 4),
     this_min_spaces=1,
-
 )
 
 cust_mnt_modular = Customization(

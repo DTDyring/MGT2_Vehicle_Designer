@@ -9,13 +9,15 @@ class Vehicle:
         self.spaces = 1
         self.chassis: Chassis
         self.armor: Armor
-        self.armament = [Mount]
+        self.armament: [Mount]
         self.customizations: [Customization]
         self.personnel = {
             "Total Personnel": 0, "Spaces per Person": 0
         }
         # only used for rail riders, default False to prevent users experiencing frustrating behavior
         self.can_off_rail = False
+
+    # TODO: do repr
 
     def get_used_spaces(self):
         """Sums all Spaces outside the chassis total spaces"""
@@ -40,7 +42,9 @@ class Vehicle:
         pass
 
     def get_shipping_tonnage(self):
-        """this needs to be (total spaces * shipping tonnage per space)
+        """this needs to be (base_spaces * shipping_tonnage_per_space
+                                - shipping_tonnage * sum(shipping_tonnage_reduction_pct)
+            and, if shipping_tonnage > 30, return max(30, shipping_tonnage/2)
 
             Returns:
                 shipping_tonnage: int
@@ -67,3 +71,20 @@ class Vehicle:
     def get_cruise_range(self):
         """this needs to return 1.5 * range, +/- w/e mods"""
         pass
+
+    def get_chassis(self):
+        """this should return the chassis object"""
+        pass
+
+    def get_armaments(self):
+        """this should return the list of Mount objects"""
+        pass
+
+    def get_customizations(self):
+        """this should return the list of Customization objects"""
+        pass
+
+    def get_armor(self):
+        """this should return the Armor object"""
+        pass
+
